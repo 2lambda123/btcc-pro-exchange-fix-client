@@ -249,7 +249,7 @@ public class ProexTrader implements Trader{
 	}
 	
 	private void waitUntilFree(){
-		while(!this.getState().equals("Free")){
+		while(!"Free".equals(this.getState())){
 			// Sleep 20 for another Free state check
 			System.out.println("Trading Bot ==> scheduler Busy, Not Free");
 			try {
